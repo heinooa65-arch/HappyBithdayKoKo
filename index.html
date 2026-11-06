@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff4ed">
+  <title>Happy Birthday KoKo 🎈</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Canvas Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <main class="page">
+    <div class="top-mark animated-float">✦ ✧ ✦ 🎈</div>
+
+    <header class="hero scroll-reveal">
+      <div class="eyebrow">A little something made just for you</div>
+      <h1>Happy Birthday Par,<br>KoKo</h1>
+      <p>a little corner of our memories,</p>
+      <div class="hero-sticker animated-wobble" aria-hidden="true">🎂</div>
+    </header>
+
+    <section class="scrapbook scroll-reveal" id="scrapbook">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">little moments, big memories</div>
+          <h2>our little scrapbook</h2>
+          <p>Tap a memory to open it.</p>
+        </div>
+        <span aria-hidden="true">♡ ♡ ♡</span>
+      </div>
+      <div class="grid" id="memoryGrid"></div>
+    </section>
+
+    <!-- Automated Video Section (Replaced bounce space) -->
+    <section class="feature scroll-reveal" id="videoSection">
+      <div class="eyebrow">special moments in motion</div>
+      <h2>our favorite video</h2>
+      <p>Press play to watch our special memory together.</p>
+      <div class="video-container">
+        <!-- Replace 'your-video.mp4' with your actual video file path -->
+        <video id="birthdayVideo" autoplay loop muted playsinline controls>
+          <source src="vd.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="actions">
+        <button class="pill" id="toggleMute">🔊 Unmute Video</button>
+      </div>
+    </section>
+
+    <section class="feature scroll-reveal" id="favpic">
+      <div class="eyebrow">our special memory</div>
+      <h2>here is my fav pic tgt</h2>
+      <p>A little snapshot of our favorite moment together.</p>
+      <div class="fav-pic-container">
+        <div class="photo-frame">
+          <!-- Replace 'your-image.jpg' with your actual image path or drop your photo into the folder -->
+          <img src="Fufu.jpg" alt="Favorite picture together" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+          <div class="fallback-photo" style="display:none;"><span> 📸</span></div>
+        </div>
+        <div class="fav-description">
+          <h3>စားသောက်တဲ့အချိန်ပဲတည့်တယ်</h3>
+          <p>ဒီပုံထဲကလိုပဲ နောက်လဲ များ" မုန့်ဝယ်ကျွေးနိုင်ပါစေ, ရန်ရှာတာလေးလဲလျှော့ပါ တခုခုဆို ရန်ရှာနေ အောက်မှာ စာလေးရေးထားပါသည် ဖတ်ကြည့်နိုင်ပါသည်</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature letter-wrap scroll-reveal" id="letter">
+      <div class="eyebrow">one last thing</div>
+      <h2>tap the letter... 💌</h2>
+      <button class="letter-button animated-pulse" id="openLetter" aria-label="Open birthday letter">💌</button>
+      <p>There's something I wanted to tell you.</p>
+    </section>
+
+    <footer>✦<p>made with loves by Aung Hein Oo, one pixel at a time</p></footer>
+  </main>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="close" id="closeModal" aria-label="Close">✕</button>
+      <div class="eyebrow" id="modalEyebrow">a little memory</div>
+      <h2 id="modalTitle">A memory</h2>
+      <p id="modalText"></p>
+      <div id="modalImage"></div>
+    </div>
+  </div>
+
+  <!-- External Script -->
+  <script src="script.js"></script>
+</body>
+</html>
